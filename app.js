@@ -1,30 +1,18 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 const express = require('express')
 const app = express()
-const port = process.env.PORT||3000;
 
-app.use(express.static("public"))
-
-
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({ extended: false }));
-
-app.get('/api/cities', (req, res) =>{
-    res.status(200).json({
-        citiesInfo:[
-            {
-                city: 'mecca',
-                region: 'makkah'
-            },
-            {
-                city: 'jeddah',
-                region: 'makkah'
-            },
-        ]
-    })
+app.get('/', function(req,res){
+    res.json({title: 'hello world'})
 })
 
-app.post('/api')
+app.get('/arr', function(req,res){
+    res.json([{id: 1, name:'Mecca'},
+    {id: 2, name: 'Riyadh'},
+    {id: 3, name: 'Dammam'}])
+})
 
-app.listen(port, ()=>{
-    console.log("Server port :"+port)
+app.listen(3000, function(){
+    console.log('Server port :3000')
 })
