@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const PORT = 3000
 
 app.use(express.static('public'))
 
@@ -11,6 +12,6 @@ app.get('/cities', function (req, res) {
     res.json(['Mecca','Riyadh','Dammam'])//try change the values in the array
 })
 
-app.listen(3001, function () {
-    console.log('Server port http://localhost:3000')
+app.listen(PORT, function () {
+    console.log(`Server port http://localhost:${PORT}`)
 })
