@@ -1,5 +1,5 @@
 {
-  "name": "front-end",
+  "name": "weatherapp",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -7,15 +7,13 @@
     "start": "nodemon app.js"
   },
   "engines":{
-    "node": "18.x"
+    "node": "20.x"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^3.0.3",
-    "type": "module"
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0"
   }
 }

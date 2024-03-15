@@ -21,14 +21,14 @@ body{
     text-align: center;
 }
 
-.search{
+#search{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search input{
+#search select{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -41,7 +41,7 @@ body{
     font-size: 18px;
 }
 
-.search button{
+#search button{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -51,7 +51,7 @@ body{
     cursor: pointer;
 }
 
-.search button img{
+#search button img{
     width: 22px;
 }
 
