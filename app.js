@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/cities', function (req, res) {
-    res.json(['Mecca','Riyadh','Dammam'])
+    res.json(['Mecca','Riyadh','Dammam'])//try change the values in the array
 })
 
 app.listen(3001, function () {
