@@ -5,7 +5,7 @@ const PORT = 3000
 app.use(express.static('public'))
 
 app.get('/', function (req, res) {
-   res.redirect('index1.html');
+   //res.redirect('index.html');
 })
 
 app.get('/cities', function (req, res) {
