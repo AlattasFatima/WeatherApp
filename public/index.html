@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="weatherApp.css" rel="stylesheet">
@@ -10,12 +10,10 @@
     
         <div class="card">
             
-            <div class="search">
-                    <span>Chooce the city:</span>
-                         <select id="selectCity" name="selectCity">
-                            <option style="display:none;"></option>
-                            
-                         </select>
+            <div id="search">
+                <select placeholder="Enter a city name:">
+                    <!-- <option disabled selected>Select your option</option> -->
+                </select>
                 <button class="btn"><img src="Media/search.png" alt="search icon"></button>
             </div>
 
@@ -26,7 +24,7 @@
 
             <div class="weather">
                 <img src="" class="icon">
-                <h1 class="temp">22°<sup>c</sup></h1> 
+                <h1 class="temp">22℃<sup>c</sup></h1> 
                 <h2 class="city">Makkah</h2>
                     
                 <div class="details">
@@ -52,13 +50,8 @@
 
         </div>
         
+        
 
-    <script src="weatherApp.js">
-        fetch('http://localhost:3000/arr')
-        .then(res => {
-            console.log(res);
-        })
-    </script>
-    
+    <script src="weatherApp.js"></script>
 </body>
 </html>
