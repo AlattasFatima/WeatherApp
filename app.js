@@ -1,18 +1,17 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
 const express = require('express')
 const app = express()
+const PORT = 3000
 
-app.get('/', function(req,res){
-    res.json({title: 'hello world'})
+app.use(express.static('public'))
+
+app.get('/', function (req, res) {
+   res.redirect('index1.html');
 })
 
-app.get('/arr', function(req,res){
-    res.json([{id: 1, name:'Mecca'},
-    {id: 2, name: 'Riyadh'},
-    {id: 3, name: 'Dammam'}])
+app.get('/cities', function (req, res) {
+    res.json(['Mecca','Riyadh','Dammam', 'Jeddah'])//try change the values in the array
 })
 
-app.listen(3000, function(){
-    console.log('Server port :3000')
+app.listen(PORT, function () {
+    console.log(`Server port http://localhost:${PORT}`)
 })
