@@ -1,0 +1,165 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'didot';
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: whitesmoke;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size: 250px;
+    background-repeat: no-repeat; 
+    background-position: right;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 340px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a{
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'aclonica';
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #e1c564;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.7s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.headertext{
+    text-align: center;
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.headertext h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+/* About */
+#about{
+    padding: 80px 0px;
+    color: #ababab;
+    margin-top: -100px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about1{
+    flex-basis: 35%;
+}
+
+.about1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 1000;
+    color: white;
+    text-align: center;
+
+}
+
+.paraghraph{
+    margin: 20px 40px 40px 0px;
+    font-size: large;
+}
+
+.tabTitles{
+    display: flex;
+    margin: 20px 0px 40px;
+}
+
+.tapLinks{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tapLinks::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #e1c564;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.7s;
+}
+
+.tapLinks.activeLink::after{
+    width: 50%;
+}
+
+.tapLinks.activeLink:hover::after{
+    width: 100%;
+}
+
+.tabContent ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tabContent ul li span{
+    color: #e1c664dc;
+    font-size: 14px;
+}
+  
+.tabContent{
+    display: none;
+}
+
+.tabContent.activeTab{
+    display: block;
+}

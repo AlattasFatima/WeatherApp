@@ -1,0 +1,68 @@
+#main{
+    background-color: whitesmoke;
+    font-family: candara;
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+nav{
+    width: 100%;
+    background-color: darkseagreen;
+    padding: 0px;
+    margin-top:0px;
+    font-size: 30px;
+}
+
+input{
+    width: 250px;
+    height: 20px;
+    align-self: center;
+    font-family: candara;
+  }
+
+#mode, #random, #button{
+    display: flexbox;
+    font-family: candara;
+    padding-top: 0px;
+    display: flexbox;
+}
+
+label{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-family: candara;
+}
+#borderDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* not column */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: max-content; 
+}
+
+#borderDiv img{
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 50px;
+  border: 2px solid rgb(88, 84, 84);
+  align-content: center;
+}
+
+#container::after {
+    content: "";
+    width: 350px;
+  }
+
+  #container {
+    background-color: rgba(143, 188, 143, 0.411);
+  }

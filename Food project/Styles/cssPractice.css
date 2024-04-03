@@ -1,0 +1,59 @@
+    #main{
+        background-color: bisque;
+    }
+    a{
+        color: #575151;
+        font-size: larger;
+        margin-left: 10px;
+        font-family: Candara;
+
+    }
+    img{
+        height: 200px;
+        border-radius: 20px;
+        font-size: larger;
+    }
+    h1{
+        text-align: center;
+    }
+    h2,h4{
+    
+        height: 40px;
+        padding: 20px;
+        font-size: larger;
+        font-family: Candara;
+
+    }
+    body{
+        font-size: larger;
+        font-family: Candara;
+
+    }
+    nav{
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+        font-size: larger;
+        font-family: Candara;
+        background-color: #bc7474;
+
+    }
+
+    li{
+            font-family: Candara;
+    }
+
+    #button{
+        color: rgba(87, 81, 81);
+        font-family: Candara;
+    }
+
+    #click{
+        font-size: 20px;
+        background-color: rgb(180, 145, 191);
+        font-family: Candara;
+    }
+
+    .btn :hover{
+        color: blue;
+    }

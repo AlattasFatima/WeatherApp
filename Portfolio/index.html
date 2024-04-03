@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet" type="text/css" >
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link rel="icon" type="icon" href="NameLogos/FAicons/fatima-alattas-favicon-black.png">
+    <title>Fatima Alattas</title>
+</head>
+
+<body>
+    
+    <div id="header">
+        <div class="container">
+
+            <nav>
+                <img src="NameLogos/png/logo-no-background.png" alt="Logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">My projects</a></li>
+                    <li><a href="#">Contact me</a></li>
+                </ul>
+            </nav>
+
+            <div class="headertext">
+                <p>Frontend junior Developer</p>
+                <h1>Hello, I'm <span style="color: #e1c564;">Fatima</span> Alattas.</h1>
+            </div>
+        </div>
+    </div> 
+
+<!-------about------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about1"><img src="images/user.png"></div>
+                <div class="about2">
+                    <h1 class="subtitle">About me</h1>
+                    <p class="paraghraph">Passionate Information Systems student at UQU,
+                        constantly seeking new expertise.
+                        Enthusiastic about programming and proficient in intermediate-level Java.
+                        <br>Currently expanding knowledge in web development.
+                        Committed to continuous growth and eager to contribute to exciting projects.</p>
+                       
+                    <div class="tabTitles">
+                        <p class="tapLinks activeLink" onclick="opentap('skills')">Skills</p>
+                        <p class="tapLinks" onclick="opentap('certificates')">Certificates</p>
+                        <p class="tapLinks" onclick="opentap('languages')">Languages</p>
+                    </div>
+
+                    <div class="tabContent activeTab" id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>Developer</li>
+                            <li><span>Java</span><br>Programmer</li>
+                        </ul>
+                    </div>
+
+                    <div class="tabContent" id="certificates">
+                        <ul>
+                            <li><span>Weber</span><br>Camp</li>
+                            <li><span>Emotional</span><br>intelligence</li>
+                        </ul>
+                    </div>
+
+                    <div class="tabContent" id="languages">
+                        <ul>
+                            <li><span>English</span><br>****</li>
+                            <li><span>Turkish</span><br>**</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+
+</body>
+
+</html>

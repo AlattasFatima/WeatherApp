@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    color: #ffffffc4;
+    font-family: candara;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #2a6666, #092635, #2a6666 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con{
+    height: 360px;
+    width: 500px;
+    perspective: 600px;
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d ;
+}
+
+.con:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    background: #215050;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-weight: 500;
+}
+
+.front #name{
+    display: flexbox;
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#image1{
+    margin-top: 10px;
+    margin-left: 75px;
+    padding-bottom: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.back{
+    transform: rotateY(180deg) ;
+    display: flexbox;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#image2{
+    margin-top: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: inline;
+}
+
+.name1, #username, #email, #website{
+    display: inline;    
+}
+
+#button{
+    margin-top: 600px;
+    cursor: pointer;
+    font-family: candara;
+    font-size: 15px;
+    align-content: center;
+}
