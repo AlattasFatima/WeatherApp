@@ -9,11 +9,11 @@ app.get('/', function (req, res) {
 })
 
 app.get('/cities', function (req, res) {
-    res.json(['Abha','Abqaiq', 'Bahah', 'Dammam', 'Hufuf',
-    'Jawf', 'Kharj', 'Al-Khubar', 'Qatif', 'Taif', 'Arar',
-    'Buraydah', 'Dhahran', 'Ḥail', 'Jiddah', 'Jizan', 'Khamis Mushayt',
+    res.json(['Abha','Abqaiq', 'Bahah', 'Dammam',
+    'Kharj', 'Al-Khubar', 'Taif', 'Arar',
+    'Buraydah', 'Dhahran', 'Ḥail', 'Jeddah', 'Jizan', 'Khamis Mushayt',
     'Mecca', 'Medina', 'Najran', 'Ras Tanura', 'Riyadh',
-    'Sakaka', 'Tabuk', 'Yanbu'])
+    'Sakaka', 'Tabuk', 'Yanbu'])//try change the values in the array
 })
 
 app.listen(PORT, function () {
