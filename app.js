@@ -19,3 +19,4 @@ app.get('/cities', function (req, res) {
 app.listen(PORT, function () {
     console.log(`Server port http://localhost:${PORT}`)
 })
+
