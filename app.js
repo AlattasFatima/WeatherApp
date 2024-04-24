@@ -18,10 +18,10 @@ app.get('/cities', function (req, res) {
 })
 
 app.post('/',
-    (req, res) => {
+    (req, res) => {    });
 
-    });
 
+    
 app.listen(PORT, function () {
     console.log(`Server port http://localhost:${PORT}`)
 })
