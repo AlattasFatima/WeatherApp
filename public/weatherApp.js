@@ -1,70 +1,59 @@
-const search = document.querySelector('.search input');
-const btn = document.querySelector('.search button');
+const cityInput = document.querySelector('#cityInput');
+const btn = document.querySelector('.btn');
 const icon = document.querySelector(".icon");
 
-const apiKey = "790537514169f7621c8db46f98f30066";
+const apiKey = "YOUR_API_KEY"; // استبدل YOUR_API_KEY بمفتاح API الخاص بك
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-async function checkWeather(city){
+async function checkWeather(city) {
+    try {
+        const response = await fetch(`${apiUrl}${city}&appid=${apiKey}`);
 
-    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-    
-    if(response.status == 404){
+        if (!response.ok) {
+            throw new Error("City not found");
+        }
+
+        const data = await response.json();
+
+        document.querySelector(".city").innerText = data.name;
+        document.querySelector(".temp").innerText = `${Math.round(data.main.temp)}°C`;
+        document.querySelector(".humidity").innerText = `${data.main.humidity}%`;
+        document.querySelector(".wind").innerText = `${data.wind.speed} km/h`;
+
+        // تغيير الأيقونة بناءً على حالة الطقس
+        const weatherCondition = data.weather[0].main.toLowerCase();
+        const weatherIcons = {
+            clear: "Media/clear.png",
+            clouds: "Media/clouds.png",
+            snow: "Media/snow.png",
+            rain: "Media/rain.png",
+            drizzle: "Media/drizzle.png",
+            mist: "Media/mist.png"
+        };
+
+        icon.src = weatherIcons[weatherCondition] || "Media/default.png"; 
+
+        document.querySelector(".error").style.display = "none";
+        document.querySelector(".weather").style.display = "block";
+    } catch (error) {
         document.querySelector('.error').style.display = "block";
         document.querySelector(".weather").style.display = "none";
     }
-    
-    else{
+}
 
-        document.querySelector('.error').style.display = "none";
-        document.querySelector(".weather").style.display = "block";
+// عند الضغط على زر البحث
+btn.addEventListener("click", () => {
+    const city = cityInput.value.trim();
+    if (city) {
+        checkWeather(city);
+    } else {
+        alert("Please enter a city name.");
+    }
+});
 
-        const data = await response.json();
-        
-        document.querySelector(".city").innerHTML = data.name;
-        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
-        document.querySelector(".humidity").innerHTML = data.main.humidity + " %";
-        document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-        
-        switch (data.weather[0].main) {
-            
-            case 'Clear':
-                icon.src = "Media/clear.png"
-                break;
-        
-            case 'Clouds':
-                icon.src = "Media/clouds.png"
-                break;
-
-            case 'snow':
-                icon.src = "Media/snow.png"
-                break;
-
-            case 'Rain':
-                icon.src = "Media/rain.png"
-                break;
-
-            case 'drizzle':
-                icon.src = "Media/drizzle.png"
-                break;
-
-            case 'mist':
-                icon.src = "Media/mist.png"
-                break;
-                
-            default:
-                icon.src = " "
-                break;
-        }//switch
-        
-          
-        
-        console.log('else');
-    document.querySelector(".weather").style.display = "block";
-}//else
-
-}//function
-
-btn.addEventListener("click", ()=>{
-    checkWeather(search.value);
+// تشغيل البحث عند الضغط على Enter
+cityInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        btn.click();
+    }
 });
