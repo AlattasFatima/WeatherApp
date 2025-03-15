@@ -2,7 +2,7 @@ const cityInput = document.querySelector('#cityInput');
 const btn = document.querySelector('.btn');
 const icon = document.querySelector(".icon");
 
-const apiKey = "YOUR_API_KEY"; // استبدل YOUR_API_KEY بمفتاح API الخاص بك
+const apiKey = "f7ddb153b0f6be15f081c6592030412b"; // استبدل YOUR_API_KEY بمفتاح API الخاص بك
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 async function checkWeather(city) {
